@@ -16,5 +16,5 @@ b0ea7ed5 ..\..\vpc_scripts\source_dll_win32_release.vpc
 c209a88e ..\..\vpc_scripts\protobuf_builder.vpc
 d1c158fe ..\..\game\protobuf_include.vpc
 05435e64 ..\..\vpc_scripts\pysource_base.vpc
-9255a2fe ..\..\game\server\server_pysource_autogen.vpc
+74ebb1d9 ..\..\game\server\server_pysource_autogen.vpc
 30bf2216 ..\..\vpc_scripts\definitions\win32_2010.def
