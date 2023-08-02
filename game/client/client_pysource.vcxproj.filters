@@ -2186,6 +2186,9 @@
     <ClInclude Include="toolframework_client.h">
       <Filter>Tool Framework</Filter>
     </ClInclude>
+    <ClInclude Include="spawnmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mp3player.cpp">
@@ -4026,6 +4029,12 @@
     </ClCompile>
     <ClCompile Include="hl2\c_weapon_gravitygun.cpp">
       <Filter>Source Files\HL2 DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="spawnmenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnMenuCommand.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
