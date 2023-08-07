@@ -176,6 +176,7 @@ void CHL2MP_Player::GiveAllItems( void )
 	GiveNamedItem( "weapon_crowbar" );
 	GiveNamedItem( "weapon_stunstick" );
 	GiveNamedItem( "weapon_pistol" );
+	GiveNamedItem( "weapon_physgun" );
 	GiveNamedItem( "weapon_357" );
 
 	GiveNamedItem( "weapon_smg1" );
@@ -214,6 +215,7 @@ void CHL2MP_Player::GiveDefaultItems( void )
 	}
 	
 	GiveNamedItem( "weapon_pistol" );
+	GiveNamedItem( "weapon_physgun" );
 	GiveNamedItem( "weapon_smg1" );
 	GiveNamedItem( "weapon_frag" );
 	GiveNamedItem( "weapon_physcannon" );

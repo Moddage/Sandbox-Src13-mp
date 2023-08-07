@@ -3,7 +3,7 @@
 using namespace vgui;
 #include <vgui/IVGui.h>
 #include <vgui_controls/Frame.h>
-#include <vgui_controls/Button.h>
+#include <vgui_controls/ImagePanel.h>
 
 class CSpawnMenu : public vgui::Frame
 {
@@ -18,7 +18,7 @@ protected:
 
 private:
     //Other used VGUI control Elements:
-
+	vgui::ImagePanel* IBall;
 	// Constuctor: Initializes the Panel
 };
 
@@ -27,7 +27,7 @@ CSpawnMenu::CSpawnMenu(vgui::VPANEL parent)
 {
 	SetParent(parent);
 
-	SetKeyBoardInputEnabled(true);
+	SetKeyBoardInputEnabled(false);
 	SetMouseInputEnabled(true);
 
 	SetProportional(false);
@@ -39,12 +39,17 @@ CSpawnMenu::CSpawnMenu(vgui::VPANEL parent)
 	SetMoveable(false);
 	SetVisible(true);
 
+	this->SetAlpha(150);
 
 	SetScheme(vgui::scheme()->LoadSchemeFromFile("resource/SourceScheme.res", "SourceScheme"));
 
 	LoadControlSettings("resource/UI/spawnmenu.res");
 
 	vgui::ivgui()->AddTickSignal(GetVPanel(), 100);
+
+	IBall = new vgui::ImagePanel(this, "IBall");
+	IBall->SetPos(300, 300);
+	IBall->SetImage(scheme()->GetImage("spawnicons/models/props_phx/ball.vmt", false));
 
 	DevMsg("Spawnmenu has been constructed\n");
 }
@@ -102,7 +107,7 @@ void CSpawnMenu::OnCommand(const char* pcCommand)
 	BaseClass::OnCommand(pcCommand);
 	if (!Q_stricmp(pcCommand, "turnoff"))
 		cl_spawnmenu.SetValue(0);
-	if (!Q_stricmp(pcCommand, "spawnprop models/props_phx/ball.mdl"))
+	if (Q_strstr(pcCommand, "spawnprop"))
 		engine->ClientCmd(pcCommand);
 }
 

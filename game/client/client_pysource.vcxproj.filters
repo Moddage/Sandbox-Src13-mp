@@ -132,6 +132,9 @@
     <Library Include="..\..\lib\public\vtf.lib">
       <Filter>Link Libraries</Filter>
     </Library>
+    <Library Include="..\..\lib\public\discord-rpc.lib">
+      <Filter>Link Libraries</Filter>
+    </Library>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\game\shared\activitylist.h">
@@ -2187,6 +2190,12 @@
       <Filter>Tool Framework</Filter>
     </ClInclude>
     <ClInclude Include="spawnmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\discord_register.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\discord_rpc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
